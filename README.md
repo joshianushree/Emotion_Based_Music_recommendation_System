@@ -19,10 +19,6 @@ An AI-powered application that detects a user's facial and hand landmarks to rec
 
 ```
 📆 Emotion-Music-Recommender
-🔹 collected_data/           # Saved .npy datasets (by emotion)
-🔹 model.h5                  # Trained emotion classifier (Keras)
-🔹 pca.pkl                   # PCA transformer
-🔹 labels.npy                # Emotion labels
 🔹 Music-app.py              # Streamlit UI application
 🔹 data_collection.py        # Webcam-based data capture
 🔹 data_training.py          # Training pipeline (with PCA + MLP)
@@ -50,17 +46,7 @@ An AI-powered application that detects a user's facial and hand landmarks to rec
 pip install streamlit tensorflow mediapipe scikit-learn opencv-python joblib
 ```
 
----
-
-### 2. ▶️ Run the App
-
-```bash
-streamlit run Music-app.py
-```
-
----
-
-### 3. 📸 Collect Your Own Data (Optional)
+### 2. 📸 Collect Your Own Data (Mandatory)
 
 ```bash
 python data_collection.py
@@ -71,7 +57,7 @@ python data_collection.py
 
 ---
 
-### 4. 🧠 Train the Model (Optional)
+### 3. 🧠 Train the Model (Mandatory)
 
 ```bash
 python data_training.py
@@ -80,6 +66,14 @@ python data_training.py
 * Automatically loads `.npy` files from `collected_data/`
 * Applies PCA and trains the model
 * Saves `model.h5`, `pca.pkl`, `labels.npy`
+
+---
+
+### 4. ▶️ Run the App
+
+```bash
+streamlit run Music-app.py
+```
 
 ---
 
